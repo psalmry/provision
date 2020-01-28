@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}<title> Webinars | Provision</title> {% endblock %}
+
+{% block main %} 
+
+<main>
+		<section id="webinar-section" class="webinar-section section-color-white section-padding border-gray insidehead-padding">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-12">
+		<h1 class="first-head">Webinars</h1>
+		<div class="clearfix m-b-12"></div>
+		<p class="first-paragraph">Meirc thrives on being the best in the 
+		application of technology-based training and development. In keeping 
+		with this commitment, we design and conduct webinars on topics which are
+		 important to our clients and the markets they operate in. These 
+		webinars are fat-free and aim at delivering high value learning in 
+		bite-sized interventions which participants can enjoy ‘live’ during 
+		advertised times, or can watch later at times that are more convenient 
+		to them. To watch any of these webinars click on its respective link. 
+		Additionally, if you wish to learn more about any topic using webinar 
+		technology, you can write to us and we will go out of our way to see how
+		 best we can help you achieve your desired learning goal.</p>
+		</div>
+		</div>
+		</div>
+		</section>
+
+		<section id="webinar-section" class="webinar-section section-color-gray section-padding">
+		<div class="container">
+		<div class="row">
+		<div class="clearfix m-b-15"></div>
+		<div class="col-md-12 no-padding">
+
+		{% for web in webinars %}
+				<div class="col-md-4">
+				<div class="col-md-12 box-list-two">
+				<div class="col-md-12 no-padding">
+				<a href="{{ web.get_absolute_url }}" target="">
+				<img src="{{ web.webinar_profile_picture.url }}" class="img-responsive lazy" alt="7 practical steps to manage a succe..." style="display: block;">
+				</a>
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-md-12 no-padding">
+				<div class="clearfix m-b-12"></div>
+				<h4 class="webinar-head no-margin m-b-6"> <a href="{{ web.get_absolute_url }}" target="">
+				{{ web.title }}</a></h4>
+				<p class="text-left text-arabic-right">
+				{{ web.overview }}
+				... </p>
+				<div class="col-md-12 no-padding">
+				<p class="text-left text-arabic-right">
+				<i class="fa fa-user" aria-hidden="true"></i> {{ web.aurthor }} </p>
+				<p class="text-left text-arabic-right">
+				<i class="fa fa-calendar" aria-hidden="true"></i> {{ web.date }} </p>
+				<div class="text-left text-arabic-right">
+				<a href="{{ web.get_absolute_url }}" target=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp; Register</a>
+				</div>
+				</div>
+				</div>
+
+				<div class="clearfix "></div>
+				</div>
+				<div class="clearfix m-b-24"></div>
+				</div>
+		{% endfor %}
+
+		
+
+		
+		<div class="clearfix"></div>
+		<div class="col-md-12"> <ul class="pagination" id="search_page_pagination"><li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://www.meirc.com/webinars/9" data-ci-pagination-page="2">2</a></li><li><a href="https://www.meirc.com/webinars/18" data-ci-pagination-page="3">3</a></li><li><a href="https://www.meirc.com/webinars/99" data-ci-pagination-page="12">Last</a></li></ul> </div>
+		</div>
+		</div>
+		</div>
+		</section>
+</main>
+{% endblock %}

@@ -1,0 +1,909 @@
+{% load static %}
+
+<!DOCTYPE html>
+        <html>
+            <head>
+
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+               {% block title %} {% endblock %}
+                <link type="image/x-icon" rel="shortcut icon" href="images\favicon/"/>
+                <meta name="description" data-oe-model="ir.ui.view" data-oe-id="464" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/t/meta[3]"/>
+                <meta name="keywords" data-oe-model="ir.ui.view" data-oe-id="464" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/t/meta[4]"/>
+
+      
+                <link type="text/css" rel="stylesheet" href="{% static 'css/web.assets_common.0.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/web.assets_frontend.0.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/web.assets_frontend.1.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/web_editor.summernote.0.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/web_editor.assets_editor.0.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/website.assets_editor.0.css' %}"/>
+
+              
+                <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/menu.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/parsley.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+                <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+                <link type="text/css" rel="stylesheet" href="{% static 'css/bootstap.min.css' %}"/>
+               
+                <script type="text/javascript" src="{% static 'js/web.assets_common.js' %}"></script>
+                <script type="text/javascript" src=" {% static 'js/web.assets_frontend.js' %}"></script>
+                <script type="text/javascript" src=" {% static 'js/web_editor.summernote.js' %}"></script>
+                <script type="text/javascript" src=" {% static 'js/web_editor.assets_editor.js' %}"></script>
+                <script type="text/javascript" src=" {% static 'js/website.assets_editor.js' %}"></script>
+        
+            </head>
+
+            <body>  
+                <div id="wrapwrap">
+                            
+                <div class="t_header_before_overlay">
+                  <div class="header_before_bg header_style_6_main">
+                    <div class="container">
+                      <div class="row align-items-center py-2">
+                        <div class="col-lg-5 t_header_before_left">
+                          <div class="t_header_social">
+                            <section>
+                              <p data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/p[1]"></p>
+                              <section class="s_share t_header_w_share ">
+                                <a class="btn btn-link" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/a[1]" href="https://www.facebook.com">
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                                <a class="btn btn-link" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/a[2]" href="https://twitter.com/">
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-link" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/a[3]" href="https://www.linkedin.com/">
+                                  <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a class="btn btn-link" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/a[4]" href="https://www.youtube.com/">
+                                  <i class="fa fa-youtube-play"></i>
+                                </a>
+                                
+                                
+                              </section>
+                            </section>
+                          </div>
+
+
+                          
+
+
+                          <div class="px-1">
+                            <div class="dropdown t_header_language">
+                              <a class="dropdown-toggle btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span>English</span>
+                                <span class="caret ml4" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/a[1]/span[2]"></span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                
+                                  <a class="dropdown-item js_change_lang" href="/ar_AA/" data-lang="ar_AA">
+                                     الْعَرَبيّة
+                                  </a>
+                                
+                                  <a class="dropdown-item js_change_lang" href="/en_US/" data-default-lang="true" data-lang="en_US">
+                                    English
+                                  </a>
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7 t_header_before_right">
+                          <div class="t_header_static_menu" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[2]/div[1]">
+                            <ul>
+                              <li>
+                                {% if user.is_authenticated %}
+                                <a href="/1/category" data-original-title="" title="" aria-describedby="tooltip664027">Welcome, {{ user.get_username }}.</a>
+                                {% endif %}
+                              </li>
+                              <li>
+                                <a href="/1/category" data-original-title="" title="" aria-describedby="tooltip664027">Training Categories</a>
+                              </li>
+                              <li>
+                                <a href="#" data-original-title="" title="" aria-describedby="tooltip1796">Contact us</a>
+                              </li>
+                              <li>
+                                <a href="#" data-original-title="" title="" aria-describedby="tooltip218427">Live Support</a>
+                              </li>
+                              <li>
+                                <a href="#" data-original-title="" title="" aria-describedby="tooltip986943">Course Booking</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="px-2 header_6_srch_icon" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[2]/div[2]">
+                            <a>
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+                          
+                         {% if user.is_authenticated %}
+                              <div class="px-1 t_header_account">
+                                <div class="dropdown t_user_account">
+                                  <a href="#" class="dropdown-toggle btn-link" data-toggle="dropdown">
+                                    <span class="user_account_name">Administrator</span>
+                                    <span class="user_account_icon">
+                                      <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                  </a>
+                                  <div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+                                    <a href="/my/home" role="menuitem" class="dropdown-item"><span class="fa fa-user"></span>My Account</a>
+                                    <a href="/my/orders" role="menuitem" class="dropdown-item"><span class="fa fa-pie-chart"></span>My Courses</a>
+                                    <a id="o_logout" class="dropdown-item" role="menuitem" href="accounts/logout/"><span class="fa fa-sign-out"></span>Logout</a>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                          {% else %}
+                            <a class="" role="menuitem" href="/accounts/login/"><span class="fa fa-sign-in"></span>Sign In</a> Or
+
+                            <a class="" role="menuitem" href="/accounts/signup/"><span class="fa fa-sign-up"></span>Sign Up</a>
+                          {% endif %}
+
+                        </div>
+                        <!--
+                        <div class="col-lg-7 t_header_search">
+                          <div class="t_sub_search">
+                            <span class="t_header_search_close" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[3]/div[1]/span[1]">x</span>
+                            <form action="/shop" method="get">
+                              <div class="input-group">
+                                <button type="submit" class="btn btn-link oe_search_button t_search_icon" data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/button[1]">
+                                  <i class="fa fa-search"></i>
+                                </button>
+                                <input type="text" name="search" class="search-query form-control oe_search_box t_srch_box" placeholder="Search..." data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/div/div[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/input[1]"/>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+               <header class=" o_affix_enabled">
+                                <nav class="navbar navbar-expand-md t_header_navbar navbar-light
+            				px-0 py-2
+            			">
+                                    <div class="container">
+                                        <a href="/" class="navbar-brand logo">
+                        <span data-oe-model="res.company" data-oe-id="1" data-oe-field="logo" data-oe-type="image" data-oe-expression="res_company.logo" role="img" aria-label="Logo of Purevisions" title="Purevisions">
+
+                          <img src="{% static 'images/logo.png' %}" class="img img-fluid"/></span>
+                    </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#top_menu_collapse" data-oe-model="ir.ui.view" data-oe-id="354" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/header[1]/nav[1]/div[1]/button[1]">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="top_menu_collapse">
+                                            <ul class="nav navbar-nav ml-auto text-right" id="top_menu">
+                                                
+                    
+                        
+                
+                <li class="nav-item ">
+            		        <a role="menuitem" href="/" class="nav-link active">
+            		            <span data-oe-model="website.menu" data-oe-id="5" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Home
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                    
+                        
+                
+                
+            		<li class="nav-item dropdown ">
+                    <a data-toggle="dropdown" href="#" class="nav-link dropdown-toggle">
+                        <span data-oe-model="website.menu" data-oe-id="33" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Services</span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="blended-learning" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="34" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Blended Learning</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="consultancy-services" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="30" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Consultancy Services</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="executive-coaching" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="28" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Executive Coaching</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="e-learning-solutions" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="29" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">e-Learning Solutions</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="outsourcing-solutions" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="32" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Outsourcing Solutions</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="in-house-courses" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="31" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">In House Courses</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="talent-tool" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="35" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Talent Tool</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="iso-robot" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="40" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">ISO Robot</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="individual-training-program-itp" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="38" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Individual Training Program - ITP</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="intelligent-leader-program-ilp5" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="36" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Intelligent Leader Program - ILP5</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="empowerment-leadership-program-elp" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="37" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Empowerment Leadership Program - ELP</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="engineering-management-consulting" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="39" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Engineering &amp; Management Consulting</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="testing-examination-center" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="41" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Testing &amp; Examination Center</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                    </ul>
+                </li>
+
+                    
+                        
+                
+                <li class="nav-item ">
+            		        <a role="menuitem" href="/webinar" class="nav-link ">
+            		            <span data-oe-model="website.menu" data-oe-id="50" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Webinars</span>
+            		        </a>
+            		</li>
+
+                <li class="nav-item ">
+                        <a role="menuitem" href="/1/category" class="nav-link ">
+                            <span data-oe-model="website.menu" data-oe-id="50" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Courses</span>
+                        </a>
+                </li>
+                
+            		
+
+                    
+                        
+                
+                
+            		<li class="nav-item dropdown ">
+                    <a data-toggle="dropdown" href="#" class="nav-link dropdown-toggle">
+                        <span data-oe-model="website.menu" data-oe-id="27" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">About Us</span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="accreditations" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="42" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Accreditations</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="aboutus" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="26" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Our Team</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="instructors" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="43" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Instructors</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="clients" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="57" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Clients</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="contactus" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="6" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Contact us</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                    </ul>
+                </li>
+
+                    
+                        
+                
+                
+            		<li class="nav-item dropdown ">
+                    <a data-toggle="dropdown" href="#" class="nav-link dropdown-toggle">
+                        <span data-oe-model="website.menu" data-oe-id="25" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">More</span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="/event" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="11" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Course Booking</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="/livechat" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="13" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Live Support</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="/jobs" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="17" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Jobs</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                            
+                
+                <li class=" ">
+            		        <a role="menuitem" href="/blog" class="dropdown-item ">
+            		            <span data-oe-model="website.menu" data-oe-id="7" data-oe-field="name" data-oe-type="char" data-oe-expression="submenu.name">Blog</span>
+            		        </a>
+            		    
+            			
+            			
+            				
+            			
+            		</li>
+            		
+
+                        
+                    </ul>
+                </li>
+
+                    
+                
+                        
+                        <li class="nav-item divider d-none" data-oe-id="948" data-oe-xpath="/data/xpath/li[1]" data-oe-model="ir.ui.view" data-oe-field="arch"></li> <li id="my_cart" class="nav-item d-none">
+                
+            		
+            		 <a id="my_cart" href="/shop/cart" class="nav-link">
+            			<i class="fa fa-shopping-cart" data-oe-model="ir.ui.view" data-oe-id="1724" data-oe-field="arch" data-oe-xpath="/t[1]/a[1]/i[1]"></i>
+            			<span data-oe-model="ir.ui.view" data-oe-id="1724" data-oe-field="arch" data-oe-xpath="/t[1]/a[1]/span[1]"> My Cart</span><sup class="my_cart_quantity badge badge-primary">0</sup>
+            		</a>
+            	
+              </li>
+                        
+                            
+                            <li id="my_wish" class="nav-item" style="display:none;">
+                
+            		
+            			
+            			<a id="my_wish" href="/shop/wishlist" class="nav-link" style="display:none;">
+            				<i class="fa fa-heart-o" data-oe-model="ir.ui.view" data-oe-id="1727" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/a[1]/i[1]"></i>
+            				<span data-oe-model="ir.ui.view" data-oe-id="1727" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/a[1]/span[1]">Wishlist</span><sup class="my_wish_quantity o_animate_blink badge badge-primary">0</sup>
+            			</a>
+            		
+            	
+              </li>
+            		
+                    
+                    </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </header>
+                <div class="te_vertical_menu">
+                  <section data-oe-model="ir.ui.view" data-oe-id="1714" data-oe-field="arch" data-oe-xpath="/data/xpath[1]/div/section[1]">
+                    <a href="#" class="te_menu_btn_close">
+                      <i class="fa fa-times te_menu_icon_close"></i>
+                    </a>
+                  </section>
+                  
+                </div>
+
+    {% block main %}
+    <p>Welcome to home base using base</p>
+    {% endblock %}
+  
+               
+    <footer class="bg-light o_footer">
+                    
+    <section class="s_text_block py-5">
+      <div class="container">
+        <div class="row">
+          <div class="footer_add_tel_email col-lg-3">
+            <div class="d-block mb16">
+              <a href="/" class="footer_logo">
+                <span data-oe-model="res.company" data-oe-id="1" data-oe-field="logo" data-oe-type="image" data-oe-expression="res_company.logo" class="footer_logo_img" role="img" aria-label="Logo of Purevisions" title="Purevisions"><img src="{% static 'images/logo.png' %}" class="img img-fluid"/></span>
+              </a>
+            </div>
+            <ul class="footer_info_text">
+              <li><span class="footer_add_tel_email_text_ept" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/ul[1]/li[1]/span[1]">add</span>
+									:
+									<span class="ftr_text_style"><span data-oe-model="res.company" data-oe-id="1" data-oe-field="street" data-oe-type="char" data-oe-expression="res_company.street">Pure visions health &amp; saftey training and consultancy center.</span><span data-oe-model="res.company" data-oe-id="1" data-oe-field="street2" data-oe-type="char" data-oe-expression="res_company.street2">3269 King Abdullah Branch Rd</span><span data-oe-model="res.company" data-oe-id="1" data-oe-field="city" data-oe-type="char" data-oe-expression="res_company.city">Riyadh</span><span data-oe-model="res.company" data-oe-id="1" data-oe-field="state_id" data-oe-type="many2one" data-oe-expression="res_company.state_id"></span><span data-oe-model="res.company" data-oe-id="1" data-oe-field="zip" data-oe-type="char" data-oe-expression="res_company.zip">12254</span><span data-oe-model="res.company" data-oe-id="1" data-oe-field="country_id" data-oe-type="many2one" data-oe-expression="res_company.country_id" data-oe-many2one-id="192" data-oe-many2one-model="res.country">Saudi Arabia</span></span>
+								</li>
+              
+              <li><span class="footer_add_tel_email_text_ept" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/ul[1]/li[3]/span[1]">email</span>
+									:
+									<span data-oe-model="res.company" data-oe-id="1" data-oe-field="email" data-oe-type="char" data-oe-expression="res_company.email" class="ftr_text_style">info@pure-visions.com</span>
+								</li>
+            </ul>
+            <div class="footer_social_icon">
+              <a class="btn btn-sm btn-link" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/div[2]/a[1]" href="https://www.facebook.com">
+                <i class="fa fa-facebook-square text-alpha" data-original-title="" title="" aria-describedby="tooltip906188" style=""></i>
+              </a>
+              <a class="btn btn-sm btn-link" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/div[2]/a[2]" href="https://twitter.com/">
+                <i class="fa fa-twitter text-alpha" data-original-title="" title="" aria-describedby="tooltip976651" style=""></i>
+              </a>
+              <a class="btn btn-sm btn-link" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/div[2]/a[3]" href="https://www.linkedin.com/">
+                <i class="fa fa-linkedin text-alpha" data-original-title="" title="" aria-describedby="tooltip614974" style=""></i>
+              </a>
+              <a class="btn btn-sm btn-link" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/div[2]/a[4]" href="https://www.youtube.com/">
+                <i class="fa fa-youtube-play text-alpha" data-original-title="" title="" aria-describedby="tooltip951970" style=""></i>
+              </a>
+              
+              
+              <a class="btn btn-sm btn-link" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[1]/div[2]/a[7]" href="https://www.instagram.com/">
+                <i class="fa fa-instagram text-alpha" data-original-title="" title="" aria-describedby="tooltip740763" style=""></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[2]">
+            <ul class="footer_info_ept">
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip630002">Other Links</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip523162">Training categories</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="/shop/cart" data-original-title="" title="" aria-describedby="tooltip360118">Privacy Policy</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip983504">Terms &amp; Conditions</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip567684">Customer Services</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip567684">Latest News<br/></a>
+                </li>
+              </section>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[3]">
+            <ul class="footer_info_ept">
+              <section>
+                <li>
+                  <a href="#">About us</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#">Jobs</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#">Accreditations</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip265719">Meet the trainer</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip25806">our clients<br/></a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip25806">Contact us</a>
+                </li>
+              </section>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[4]">
+            <ul class="footer_info_ept">
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip240460">locations</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="">United States<br/></a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip539820">United Kingdom</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip128578">Saudi Arabia</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip128578">United Arab of Emirates</a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip128578">Kuwait<br/></a>
+                </li>
+              </section>
+              <section>
+                <li>
+                  <a href="#" data-original-title="" title="" aria-describedby="tooltip128578">malta<br/></a>
+                </li>
+              </section>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <section class="footer_text_img" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[2]/section/div[1]/div[1]/div[5]/section[1]">
+              <section>
+                <img src="images\atplogo200x250.png" data-original-title="" title="" aria-describedby="tooltip55245"/>
+              </section>
+            </section>
+            
+    <ul class="js_language_selector mb0 list-inline">
+        <li class="list-inline-item">
+            <div class="dropup">
+                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>English</span>
+                    <span class="caret ml4" data-oe-model="ir.ui.view" data-oe-id="472" data-oe-field="arch" data-oe-xpath="/t[1]/ul[1]/li[1]/div[1]/button[1]/span[2]"></span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    
+                        <a class="dropdown-item js_change_lang" href="/ar_AA/" data-lang="ar_AA">
+                             الْعَرَبيّة
+                        </a>
+                    
+                        <a class="dropdown-item js_change_lang" href="/en_US/" data-default-lang="true" data-lang="en_US">
+                            English
+                        </a>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="list-inline-item">
+            
+            <a data-oe-model="ir.ui.view" data-oe-id="472" data-oe-field="arch" data-oe-xpath="/t[1]/ul[1]/li[2]/a[1]" href="/web#action=base.action_view_base_language_install&amp;website_id=1&amp;url_return=%2F%5Blang%5D%2F%3F">
+                <i class="fa fa-plus-circle"></i>
+                Add a language...
+            </a>
+        </li>
+    </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  <div id="footer" class="oe_structure oe_structure_solo" data-oe-id="471" data-oe-xpath="/data/xpath/div" data-oe-model="ir.ui.view" data-oe-field="arch">
+            </div>
+    <div class="t_body_bg">
+      <div class="container">
+        <ul class="footer_inline_menu_t" data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[3]/div[1]/div[1]/ul[1]">
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Customer Service</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Accessibility</a>
+          </li>
+          <li>
+            <a href="#">Store Directory</a>
+          </li>
+        </ul>
+        <div class="copyright_add_language">
+          <span data-oe-model="ir.ui.view" data-oe-id="1706" data-oe-field="arch" data-oe-xpath="/data/xpath[3]/div[1]/div[1]/div[1]/span[1]">Developed by&nbsp;<a href="https://sittec.co" data-original-title="" title="" aria-describedby="tooltip529056" target="_blank"><u>ThinkMagine</u></a> - Copyright ©</span>
+          <span data-oe-model="res.company" data-oe-id="1" data-oe-field="name" data-oe-type="char" data-oe-expression="res_company.name" itemprop="name">Purevisions</span>
+        </div>
+      </div>
+    </div>
+    <div class="scrollup-div text-center" data-oe-id="1706" data-oe-xpath="/data/xpath[3]/div[2]" data-oe-model="ir.ui.view" data-oe-field="arch">
+      <a href="#" class="scrollup-a">
+        <i class="fa fa-angle-up scrollup-i text-center"></i>
+      </a>
+    </div>
+  
+    </footer>
+			<script src=" {% static 'js/aos.js' %}" data-oe-id="1904" data-oe-xpath="/data/xpath/script[1]" data-oe-model="ir.ui.view" data-oe-field="arch"></script>
+		
+	         <script data-oe-id="1904" data-oe-xpath="/data/xpath/script[2]" data-oe-model="ir.ui.view" data-oe-field="arch">
+				AOS.init({
+			  		easing: 'ease-out-back',
+					duration: 1500,
+					offset: 0,
+				});
+			</script>
+	    
+            </div>
+			<div class="d-none cus_theme_loader_layout" data-oe-id="1730" data-oe-xpath="/data/xpath/div" data-oe-model="ir.ui.view" data-oe-field="arch">
+				<div class="cus_theme_loader_div_layout">
+					<svg version="1.1" id="Layer_1" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" {http://www.w3.org/XML/1998/namespace}space="preserve">
+                        <rect x="0" y="0" width="4" height="10" fill="#333">
+                            <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s" repeatCount="indefinite"></animateTransform>
+                        </rect>
+                        <rect x="10" y="0" width="4" height="10" fill="#333">
+                            <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+                        </rect>
+                        <rect x="20" y="0" width="4" height="10" fill="#333">
+                            <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+                        </rect>
+                    </svg>
+				</div>
+			</div>
+		
+                
+                    <script>
+                        
+            
+
+            
+                
+            
+                document.addEventListener("DOMContentLoaded", function(event) {
+                    
+
+                    odoo.define('im_livechat.livesupport', function (require) {
+            
+                    });
+                });
+            
+        
+                    </script>
+                
+            
+        
+    
+        
+            </body>
+        </html>
+    
+    

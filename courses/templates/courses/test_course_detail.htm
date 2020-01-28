@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}Rex Home {% endblock %}
+
+{% block main %} 
+<main>
+<h1> Course Page <h1>
+<h3>{{ object.title }}</h1>
+<p>{{ object.category }}</p>
+<p>{{ object.overview }}</p>
+
+
+
+
+{% for location in object.location.all %}
+<ul>
+		<li>{{ location.date }}</li>
+		<li>{{ location.language }}</li>
+		<li>{{ location.location }}</li>
+</ul>
+{% endfor %}
+
+
+
+<p>{{ object.fees }}</p>
+
+<p>{{ object.outline }}</p>
+
+{% endblock %}

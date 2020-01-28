@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}<title> {{ category.name }} | Provision</title> {% endblock %}
+
+{% block main %} 
+<!--
+<main>
+	<ul>
+		{% for course in courses %}
+			<li>
+				<a>{{ course.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</main>
+-->
+<main>
+<section id="search-section" class="search-section section-padding">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 search-section-padding">
+                <form action="https://www.meirc.com/search" method="get" class="search-area">
+                    <div class="form-group no-margin">
+                        <div class="col-md-3 no-padding">
+                            <input type="text" class="form-control" id="header-auto-complete-input-2" name="pattern"
+                                placeholder="Search for your Course" value="">
+                            <div id="header-auto-complete-results-2" style="display: none;"></div>
+                        </div>
+                        <div class="col-md-2 no-padding">
+                            <select class="form-control selectbox" name="category_id">
+                                <option value="">
+                                    Category </option>
+                                <option value="1">
+                                    Accounting and Finance </option>
+                                <option value="2">
+                                    Administration and Secretarial </option>
+                                <option value="29">
+                                    Auditing and Governance, Risk and Compliance </option>
+                                <option value="21">
+                                    Banking, Insurance and Financial Services </option>
+                                <option value="3">
+                                    Communication and Writing Skills </option>
+                                <option value="18">
+                                    Construction Management </option>
+                                <option value="4">
+                                    Contracts Management </option>
+                                <option value="5">
+                                    Customer Service </option>
+                                <option value="31">
+                                    Data Management and Business Intelligence </option>
+                                <option value="32">
+                                    Digital Innovation and Transformation </option>
+                                <option value="23">
+                                    Engineering and Instrumentation </option>
+                                <option value="33">
+                                    Hands-on Automation and Process Control </option>
+                                <option value="16">
+                                    Health, Safety and Environment </option>
+                                <option value="20">
+                                    Healthcare and Pharmaceutical Management </option>
+                                <option value="6">
+                                    Human Resources and Training </option>
+                                <option value="8">
+                                    Interpersonal Skills and Self Development </option>
+                                <option value="7">
+                                    IT Management </option>
+                                <option value="9">
+                                    Leadership and Management </option>
+                                <option value="22">
+                                    Legal </option>
+                                <option value="11">
+                                    Maintenance Planning and Asset Management </option>
+                                <option value="10">
+                                    Marketing and Sales </option>
+                                <option value="26">
+                                    Oil and Gas </option>
+                                <option value="12">
+                                    Planning and Strategy Management </option>
+                                <option value="17">
+                                    Procurement and Supply Chain Management </option>
+                                <option value="13">
+                                    Project Management </option>
+                                <option value="14">
+                                    Public Relations </option>
+                                <option value="15">
+                                    Quality and Productivity </option>
+                                <option value="19">
+                                    Security Management </option>
+                                <option value="30">
+                                    Transportation Management and Aviation </option>
+                                <option value="25">
+                                    Women Only Courses </option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 no-padding">
+                            <select class="form-control selectbox" name="city_id">
+                                <option value="">
+                                    City </option>
+                                <option value="1">
+                                    Abu Dhabi </option>
+                                <option value="26">
+                                    Baku </option>
+                                <option value="2">
+                                    Barcelona </option>
+                                <option value="12">
+                                    Cairo </option>
+                                <option value="4">
+                                    Dubai </option>
+                                <option value="5">
+                                    Istanbul </option>
+                                <option value="17">
+                                    Jakarta </option>
+                                <option value="6">
+                                    Kuala Lumpur </option>
+                                <option value="15">
+                                    London </option>
+                                <option value="10">
+                                    Riyadh </option>
+                                <option value="18">
+                                    Vienna </option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 no-padding">
+                            <select class="form-control selectbox" name="lang_id">
+                                <option value="">
+                                    Language </option>
+                                <option value="2">
+                                    Arabic </option>
+                                <option value="1">
+                                    English </option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 no-padding">
+                            <select class="form-control selectbox" name="month">
+                                <option value="">
+                                    Month </option>
+                                <option value="1">
+                                    January </option>
+                                <option value="2">
+                                    February </option>
+                                <option value="3">
+                                    March </option>
+                                <option value="4">
+                                    April </option>
+                                <option value="5">
+                                    May </option>
+                                <option value="6">
+                                    June </option>
+                                <option value="7">
+                                    July </option>
+                                <option value="8">
+                                    August </option>
+                                <option value="9">
+                                    September </option>
+                                <option value="10">
+                                    October </option>
+                                <option value="11">
+                                    November </option>
+                                <option value="12">
+                                    December </option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 no-padding">
+                            <select class="form-control selectbox" name="year">
+                                <option value="">
+                                    Year </option>
+                                <option value="2020">
+                                    2020 </option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 no-padding">
+                            <input type="submit" class="btn btn-block btn-success" id="search-btn" value="Search">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+	<section id="courselistmain-section" class="courselistmain-section section-color-white section-padding border-gray insidehead-padding-10">
+<div class="container">
+<div class="row">
+<div class="col-md-11">
+<h1 class="insidetop-head" style="color:#254bad!important">{{ category.name }}</h1>
+</div>
+<div class="col-md-1">
+<a href="#" class="btn btn-block btn-small btn-success m-b-0 m-t-1" id="modify-search"><i class="fa fa-search" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="inside-wrapper" class="courselistmain-section section-color-gray section-padding">
+<div class="container">
+<div class="row">
+<div class="clearfix"></div>
+<section class="sidebar-left col-md-3">
+<div class="col-md-12 inside-coursetab">
+<h2 class="leftmenu-head">Training Categories</h2>
+<ul class="left-menu">
+
+
+{% for category in categories %}
+	<li class="">
+	<a href="{{ category.get_absolute_url }}">
+	<div class="left-menu-icon"><img src="https://www.meirc.com/assets/images/category/category-thumb/accounting-finance-training-courses.jpg" alt="" /></div>
+	<div class="left-menu-text">{{ category.name }}</div>
+	</a>
+	</li>
+{% endfor %}
+
+</ul>
+
+<div class="clearfix"></div>
+</div>
+</section>
+
+<section class="sidebar-right col-md-9">
+	
+<div class="col-md-12 inside-courselist">
+
+
+
+<div id="more_courses" class="col-md-12 p-t-0 p-b-0 p-l-9 p-r-9">
+{% for course in courses %}
+		<div class='trainingcourse-list-column col-md-3 col-sm-4 col-xs-6'>
+		<div class='box-list'>
+		<div class='col-md-12 trainingcourse-list-image'>
+		<a href="{{ course.get_absolute_url }}">
+		<img data-src="https://www.meirc.com/assets/images/course-image/course/accounting-finance-policies-procedures-courses.jpg" src="https://www.meirc.com/assets/images/course-image/course/default.jpg" class="img-responsive lazy" alt="">
+		<noscript><img src="https://www.meirc.com/assets/images/course-image/course/accounting-finance-policies-procedures-courses.jpg" alt="Accounting and Finance Policies and Procedures Courses" /></noscript>
+		</a>
+		</div>
+
+		<div class='col-md-12 trainingcourse-list-details-wrap category-list-wrap-height'>
+		<div class='col-md-12 trainingcourse-list-name'>
+		<a href="{{ course.get_absolute_url }}">
+		{{ course.title }}</a>
+		</div>
+		<div class='col-md-12 trainingcourse-list-td'>
+		<table>
+		<tr>
+		<td width='24'><i class='fa fa-calendar' aria-hidden='true'></i></td>
+		<td><a href="{{ course.get_absolute_url }}">5 days Course </a></td>
+		</tr>
+		</table>
+		</div>
+		<div class='col-md-12 trainingcourse-list-td'>
+		<table>
+		<tr>
+		<td width='24'><i class='fa fa-flag-checkered' aria-hidden='true'></i></td>
+		<td><a href="{{ course.get_absolute_url }}">English</a></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		<div class='clearfix p-b-8'></div>
+		<div class='col-md-12 single-course-sqarewraper-content-course-btn'>
+		<a href="{{ course.get_absolute_url }}" class="btn btn-small btn-block btn-blue">Course Outline</a>
+		</div>
+		</div>
+		</div>
+
+{% endfor %}
+
+<div class="clearfix m-b-15"></div>
+<div class="col-md-12 col-sm-12 text-center">
+<a href="#" class="btn btn-success btn-cons" id="load_more" data-val="24" data-subject="accounting-finance" data-url="accounting-finance">Load More Courses</a>
+</div>
+<div id="loading" class="col-md-12 col-sm-12 text-center" style="display:none;"><a href="#" class="btn btn-success btn-cons"> <i class="fa fa-circle-o-notch fa-spin"></i></a></div>
+<div class="clearfix m-b-23"></div>
+</div>
+</section>
+<div class="col-md-12 inside-container-bottom-section m-b-24">
+</div>
+</div>
+</div>
+</section>
+</main>
+{% endblock %}

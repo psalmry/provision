@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}Rex Home {% endblock %}
+
+{% block main %} 
+<main>
+<section id="inside-wrapper" class="courselistmain-section section-color-gray section-padding">
+<div class="container">
+<div class="row">
+
+<div class="clearfix"></div>
+<section class="sidebar-left col-md-3">
+<div class="col-md-12 inside-coursetab">
+<h2 class="leftmenu-head">Training Categories</h2>
+<ul class="left-menu">
+{% for category in categories %}
+	<li class="">
+	<a href="{{ category.get_absolute_url }}">
+	<div class="left-menu-icon"><img src="https://www.meirc.com/assets/images/category/category-thumb/accounting-finance-training-courses.jpg" alt="" /></div>
+	<div class="left-menu-text">{{ category.name }}</div>
+	</a>
+	</li>
+{% endfor %}
+</ul>
+
+<div class="clearfix"></div>
+</div>
+</section>
+
+<section class="sidebar-right col-md-9">
+
+<div class="col-md-12">
+<div class="col-ms-12 mobile-visible hide">
+<div class="col-ms-12 mobile-visible hide">
+<div class="col-ms-12 single-course-sqarewraper-mobile-only">
+<select class="form-control selectbox" onchange="if (!window.__cfRLUnblockHandlers) return false; change_category_mobile(this.value)" data-cf-modified-ac11ecd2bf20ec574dc06afb-="">
+<option>Filter By Training Categories</option>
+
+<option value="https://www.meirc.com/training-courses/accounting-finance">Accounting and Finance</option><option value="https://www.meirc.com/training-courses/administration-secretarial">Administration and Secretarial</option><option value="https://www.meirc.com/training-courses/auditing-governance-risk-compliance">Auditing and Governance, Risk and Compliance</option><option value="https://www.meirc.com/training-courses/banking-insurance-financial-services">Banking, Insurance and Financial Services</option><option value="https://www.meirc.com/training-courses/communication-writing-skills">Communication and Writing Skills</option><option value="https://www.meirc.com/training-courses/construction-management">Construction Management</option><option value="https://www.meirc.com/training-courses/contracts-management">Contracts Management</option><option value="https://www.meirc.com/training-courses/customer-service">Customer Service</option><option value="https://www.meirc.com/training-courses/data-management-business-intelligence">Data Management and Business Intelligence</option><option value="https://www.meirc.com/training-courses/digital-Innovation-transformation">Digital Innovation and Transformation</option><option value="https://www.meirc.com/training-courses/engineering-instrumentation">Engineering and Instrumentation</option><option value="https://www.meirc.com/training-courses/hands-on-automation-process-control">Hands-on Automation and Process Control</option><option value="https://www.meirc.com/training-courses/health-safety-environment">Health, Safety and Environment</option><option value="https://www.meirc.com/training-courses/healthcare-pharmaceutical-management">Healthcare and Pharmaceutical Management</option><option value="https://www.meirc.com/training-courses/human-resources-training">Human Resources and Training</option><option value="https://www.meirc.com/training-courses/interpersonal-skills-self-development">Interpersonal Skills and Self Development</option><option value="https://www.meirc.com/training-courses/it-management">IT Management</option><option value="https://www.meirc.com/training-courses/leadership-management">Leadership and Management</option><option value="https://www.meirc.com/training-courses/legal">Legal</option><option value="https://www.meirc.com/training-courses/maintenance-planning-asset-management">Maintenance Planning and Asset Management</option><option value="https://www.meirc.com/training-courses/marketing-sales">Marketing and Sales</option><option value="https://www.meirc.com/training-courses/oil-gas">Oil and Gas</option><option value="https://www.meirc.com/training-courses/planning-strategy-management">Planning and Strategy Management</option><option value="https://www.meirc.com/training-courses/procurement-supply-chain-management">Procurement and Supply Chain Management</option><option value="https://www.meirc.com/training-courses/project-management">Project Management</option><option value="https://www.meirc.com/training-courses/public-relations">Public Relations</option><option value="https://www.meirc.com/training-courses/quality-productivity">Quality and Productivity</option><option value="https://www.meirc.com/training-courses/security-management" selected="selected">Security Management</option><option value="https://www.meirc.com/training-courses/transportation-management-aviation">Transportation Management and Aviation</option><option value="https://www.meirc.com/training-courses/women-only-courses">Women Only Courses</option> </select>
+</div>
+</div>
+</div>
+<div class="col-md-12 no-padding">
+<div class="col-md-12 no-padding">
+<div class="col-md-12 box-list no-padding">
+<div class="col-md-12 no-padding">
+<div class="course-outline-head">
+<div class="col-md-8">
+<h2 class="font-18 m-t-7 m-b-2">{{ object.title }}</h2>
+</div>
+
+<div class="col-md-4 pull-right course-details-mobile-float-left">
+<a href="https://www.meirc.com/training-courses/security-management/access-control-physical-security-management/printcourse" target="_blank" class="print-download-ico full-right"><i class="fa fa-print" aria-hidden="true"></i></a>
+<a href="#" class="print-download-ico hide" title=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+<img src="https://www.meirc.com/assets/images/plus-training-courses.png" alt="" width="64px" class="m-t-7 pull-right" />
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="inside-banner">
+<img src="{{ object.course_full_img.url }}" class="img-responsive" alt="Access Control and Physical Security Management Training Courses in Dubai" />
+
+
+</div>
+<div class="col-md-12 m-t-12">
+<form action="https://www.meirc.com/in-house-training-proposal" method="post" class="pull-left mobile-btn-width-register ">
+<input type="hidden" name="course_id" value="549" />
+<input type="hidden" name="course_name" value="Access Control and Physical Security Management" />
+<input type="hidden" name="is_plus" value="1" />
+<button type="submit" id="searresultscourses-btn2" class="btn btn-info btn-sm btn-small mobile-btn-width" style="margin-right:4px;">
+Request an In-House Proposal </button>
+</form>
+<a href="#" class="btn btn-primary btn-sm btn-small mobile-btn-width" data-toggle="modal" data-target="#myModal-searchquickenquiry" data-id='549' data-plus='1' data-name='Access Control and Physical Security Management'> Quick Enquiry</a>
+<a href="#" class="btn btn-success btn-sm btn-small mobile-btn-width" data-toggle="modal" data-target="#myModal-searchdownloadbrochure" data-id='549' data-plus='1' data-name='Access Control and Physical Security Management' data-url="https://www.meirc.com/training-courses/security-management/access-control-physical-security-management/download">
+Download Brochure</a>
+<a href="#" class="btn btn-danger btn-sm btn-small mobile-btn-width" id="searresultscourses-btn1" data-toggle="modal" data-target="#myModal-callmeback" data-id='549' data-plus='1' data-name='Access Control and Physical Security Management'>Call Me Back</a>
+<a href="https://www.meirc.com/training-courses/security-management/access-control-physical-security-management/printcourse" target="_blank" class="btn btn-success btn-sm btn-small mobile-btn-width hide" aria-hidden="true"> Print</a>
+<form action="https://www.meirc.com/register" method="post" class="pull-right mobile-btn-width-register">
+<input type="hidden" name="course_id" value="549" />
+<button type="submit" class="btn btn-info btn-sm btn-small btn pull-right mobile-btn-width" id="searresultscourses-btn2">
+Register Now </button>
+</form>
+<div class="clearfix"></div>
+</div>
+<div class="col-md-12 m-b-12"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-12 m-t-12">
+<div class="col-md-12 box-list no-padding">
+<div class="course-outlinetab">
+<nav class="courseoutline-tab">
+<li><a href="#" class="overview-tab active">Overview</a></li>
+<li><a href="#" class="location-tab">Location & Date</a></li>
+<li><a href="#" class="fees-tab">Fees</a></li>
+<li><a href="#" class="ouline-tab">Course Outline</a></li>
+</nav>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div id="course_detail_print" class="col-md-12 m-t-24">
+<div class="col-md-12 box-list-two" id="overview-box">
+<p>{{ object.overview }}</p>
+</div> 
+</div>
+
+
+
+<div class="col-md-12 m-t-24">
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+<div class="row">
+<div class="row">
+<div class="col-md-6">
+<div class="col-md-12 box-list-two" id="location-box">
+<h4>Location & Date</h4>
+<div class="col-md-12 no-padding">
+<div class="col-md-12 no-padding">
+
+{% for location in object.location.all %}
+<div class="clearfix"></div>
+		<div class="clearfix"></div>
+		<div class="col-md-12 no-padding location-date-list">
+		<div class="col-xl-8 col-md-8 col-sm-8 col-xs-6 no-padding">
+		 <i class="fa fa-calendar" aria-hidden="true" style='width:24px;'></i>{{ location.date }}
+		<div class="clearfix"></div>
+		<i class="fa fa-map-marker map-color" aria-hidden="true" style='width:24px;'></i> {{ location.location.state }}<div class="clearfix"></div>
+		<i class="fa fa-flag-checkered flag-color" aria-hidden="true" style="width:24px;"></i> {{ location.language }} 
+		<div class="clearfix"></div>
+		<div class="col-md-12 no-padding" style="outline: 0;"><i class="fa fa-building flag-color" aria-hidden="true" style="width:24px;"></i> {{ location.location.city }}<a href="https://www.vocohotels.com/hotels/gb/en/reservation" target="_blank" data-tooltip="Test">
+		<i class="fa fa-globe" aria-hidden="true" style="font-size: 18px; color: #4285f4; margin-top: 4px;position: absolute;"></i>
+		</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps/place/voco+Dubai/@25.2234213,55.2824737,15z/data=!4m5!3m4!1s0x0:0x2baa8fd90fef16e2!8m2!3d25.2234213!4d55.2824737" target="_blank">
+		<i class="fa fa-location-arrow" aria-hidden="true" style="font-size: 18px; color: #4285f4; margin-top: 4px;position: absolute;"></i>
+		</a></div> <div class="modal fade" data-refresh="true" id="myModal-hoteldesc64" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="vertical-alignment-helper">
+		<div class="modal-dialog modal-dialog-width vertical-align-center">
+		<div class="modal-content" style="border: 0px solid #ebebeb !important;">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h4 class="modal-title">{{ location.location.city }}</h4>
+		</div>
+		<div class="modal-body row">
+		<div class="col-md-12">
+		<img src="https://www.meirc.com/assets/images/hotels/https://www.google.com/maps/place/voco+Dubai/@25.2234213,55.2824737,15z/data=!4m5!3m4!1s0x0:0x2baa8fd90fef16e2!8m2!3d25.2234213!4d55.2824737" class="img-responsive" alt="" />
+		</div>
+		<div class="col-md-12 m-t-12">
+		<p></p>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-12 m-t-12">
+		<a href="https://www.vocohotels.com/hotels/gb/en/reservation" target="_blank" class="btn btn-block btn-danger" id="searresultscourses-btn1">View Location Map</a>
+		</div>
+		<div class="clearfix"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class="col-xl-4 col-md-4 col-sm-4 col-xs-6 no-padding">
+		<form action="https://www.meirc.com/register" method="post">
+		<input type="hidden" name="course_id" value="549" />
+		<input type="hidden" name="schedule_id" value="3487" />
+		 <button type="submit" class="register-btn pull-right" data-scroll="course-register" id="searresultscourses-btn2">
+		Register </button>
+		</form>
+		</div>
+		<div class="clearfix"></div>
+		</div>
+
+{% endfor %}
+
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-12 no-padding">
+<em class="itatics-small">Meirc reserves the right to alter dates, content, venue and trainer.</em>
+</div>
+</div>
+</div>
+<div class="col-md-12 box-list-two m-t-12 hide" id="location-box">
+
+<div class="col-md-12 no-padding">
+<div class="col-md-12 no-padding">
+<p class="text-left">{{ object.duration }} Days Course</p>
+<p class="text-left">No Schedules! <br />Please Contact Us if you have any queries..</p>
+<div class="clearfix m-b-15"></div>
+<a href="#" class="btn btn-info btn-sm btn-small btn" data-toggle="modal" data-target="#myModal-schedule_me" data-id='549' data-plus='1' data-name='Access Control and Physical Security Management'>Schedule for Me</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="col-md-12 box-list-two" id="fees-box">
+<select class="form-control selectbox m-b-25" onchange="if (!window.__cfRLUnblockHandlers) return false; change_currency(this.value)" style="position: absolute; width: 200px; right: 12px; min-height: 28px; line-height: 18px; padding: 2px !important; font-size: 16px;" data-cf-modified-ac11ecd2bf20ec574dc06afb-="">
+<option value="usd">USD</option>
+<option value="aed">AED</option>
+</select>
+
+<h4 class="m-b-25">Fees</h4>
+<div class="col-md-12 no-padding fees-list hide" id="usd_price_old">
+<div class="col-xl-8 col-md-8 col-sm-6 col-xs-6 no-padding fee-smallhead">
+Per participant - 2019 </div>
+<div class="col-xl-4 col-md-4 col-sm-6 col-xs-6 no-padding fee-amount">
+USD  {{ object.fees }} </div>
+
+<div class="clearfix"></div></div>
+
+<div class="col-md-12 no-padding fees-list hide" id="aed_price_old" style="display:none;">
+<div class="col-xl-8 col-md-8 col-sm-6 col-xs-6 no-padding fee-smallhead">
+Per participant - 2019 </div>
+<div class="col-xl-4 col-md-4 col-sm-6 col-xs-6 no-padding fee-amount">
+AED {{ object.fees }} </div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix m-b-12" id="usd_price">
+<div class="col-md-12 no-padding fees-list">
+<div class="col-xl-8 col-md-8 col-sm-6 col-xs-6 no-padding fee-smallhead">
+ Per participant - 2020 </div>
+<div class="col-xl-4 col-md-4 col-sm-6 col-xs-6 no-padding fee-amount">
+USD {{ object.fees }} </div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="clearfix m-b-12" id="aed_price" style="display:none;">
+<div class="col-md-12 no-padding fees-list">
+<div class="col-xl-8 col-md-8 col-sm-6 col-xs-6 no-padding fee-smallhead">
+Per participant - 2020 </div>
+<div class="col-xl-4 col-md-4 col-sm-6 col-xs-6 no-padding fee-amount">
+AED {{ object.fees }}
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="col-md-12 no-padding">
+<div class="col-md-12 no-padding m-b-5"><b>Fees + VAT</b> as applicable</div>
+<div class="col-md-12 no-padding m-b-5"><b>Tax Registration Number : </b> 100239834300003</div>
+<div class="col-md-12 no-padding m-b-5">
+<em class="itatics-small"><b>(including coffee breaks and a buffet lunch daily)</b></em>
+<div class="clearfix"></div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-12 no-padding ">
+<a href="https://www.meirc.com/policies-and-discounts" target="_blank" class="btn btn-block btn-danger" id="searresultscourses-btn1">
+Discount Plans & Cancellations Policy</a>
+<div class="clearfix m-b-18"></div>
+</div>
+<div class="col-md-12 no-padding fees-list">
+<div class="col-xl-12 no-padding">
+<img src="https://www.meirc.com/assets/images/ads-en.png" class="img-responsive" alt="">
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="clearfix"></div>
+<div class="col-md-12 m-t-12 no-padding" style="padding: 6px; border: 1px dashed #cccccc;">
+<p class="itatics-small"> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+
+<div class="col-md-12 courseoutline-wrapper m-t-24" id="course_detail_print">
+<div class="col-md-12 courseoutline-boxes ouline-area box-list-two" id="ouline-box" data-anchor="ouline-box">
+<h4>Course Outline</h4>
+<p>{{ object.outline }}</p>
+</div>
+</div>
+
+<div class="clearfix"></div>
+</section>
+<!--
+<h1> Course Page <h1>
+<h3>{{ object.title }}</h1>
+<p>{{ object.category }}</p>
+<p>{{ object.overview }}</p>
+<p>{{ object.date }}</p>
+<p>{{ object.location }}</p>
+<p>{{ object.fees }}</p>
+<p>{{ object.outline }}</p>
+-->
+
+
+</div>
+</div>
+</section>
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}<title> Webinars | Provision</title> {% endblock %}
+
+{% block main %} 
+<main>
+		<section id="webinar-section" class="webinar-section section-color-white section-padding border-gray insidehead-padding-10">
+			<div class="container">
+			<div class="row">
+			<div class="col-md-10">
+			<h1 class="insidetop-head">Webinars</h1> </div>
+			<div class="col-md-2 mobile-fullwidth pull-right"> <a href="/webinarss" class="btn btn-block btn-small btn-success m-b-0 m-t-1">Webinars</a> </div>
+			</div>
+			</div>
+		</section>
+
+		<section id="inside-wrapper">
+			<div class="container">
+			<div class="col-md-12 inside-container-top-section"></div>
+			<div class="col-md-12">
+			<div class="row">
+			<div class="clearfix m-b-20"></div>
+			<div class="col-md-12 no-padding">
+			<div class="row">
+			<div class="col-md-6">
+			<div class="col-md-12 box-list-two">
+			<div class="row">
+			<div class="col-md-12">
+			<div class="row no-padding">
+			<div class="col-md-12 m-b-20">
+			<h3 class="insidetop-head-2 p-b-12">{{ webinar.title }}</h3>
+			<img src="{{ webinar.webinar_profile_picture.url }}" class="img-responsive" alt="">
+			<br>
+			<h3 class="insidetop-head-2 p-b-12">{{ webinar.title }}</h3>
+			<p class="text-left text-arabic-right"> <i class="fa fa-calendar" aria-hidden="true"></i>
+			{{ webinar.date }} </p>
+
+			{{ webinar.overview }}
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="clearfix"></div>
+			</div>
+			</div>
+
+			{% if webinar.webinar_type == 'paid' %}
+					<div class="col-md-6">
+					<div class="col-md-12 box-list-two" style="border: 1px solid #4285f4;">
+					<div class="col-md-12 no-padding">
+					<div class="col-md-12 no-padding">
+					<h3 class="insidetop-head-2 p-b-12">Register</h3>
+					<div class="col-md-12 m-b-20 no-padding"> </div>
+
+					<form class="contact" id="webinar_form" name="webinar_form" data-parsley-validate="" action="register" method="post" onsubmit="if (!window.__cfRLUnblockHandlers) return false; return validateform();" novalidate="">
+
+					<input id="webinar_name" name="00N580000098m5a" type="hidden" value="7 practical steps to manage a successful “Succession Planning”">
+					<input type="hidden" class="form-control" id="lead_source" name="lead_source" value="Webinar">
+					<input type="hidden" name="oid" value="00D58000000b8Gz">
+					<input type="hidden" name="city" value="Lagos">
+					<input type="hidden" name="country" value="Nigeria">
+					<input type="hidden" name="retURL" value="">
+
+					<input type="hidden" name="room_id" value="2744338">
+					<input type="hidden" name="webinar_id" value="121">
+					<div class="row contact-us-raw">
+					<div class="col-md-12">
+					<div class="col-md-12 no-padding">
+					<input type="text" class="form-control" id="first_name" name="first_name" required="" data-parsley-required-message="Required field" placeholder="First Name*">
+					</div>
+					<div class="col-md-12 no-padding">
+					<input type="text" class="form-control" id="last_name" name="last_name" required="" data-parsley-required-message="Required field" placeholder="Last Name*">
+					</div>
+					<div class="col-md-12 no-padding">
+					<input data-parsley-type="email" class="form-control" id="email" name="email" required="" data-parsley-required-message="Required field" data-parsley-type-message="Invalid Email Address" placeholder="Email*">
+					</div>
+					<div class="col-md-12 no-padding">
+					<input data-parsley-type="phone" class="form-control" id="phone" name="phone" placeholder="Phone">
+					</div>
+					
+					<div class="row contact-us-raw">
+					<div class="col-md-12">
+					<div class="col-md-12 no-padding">
+					<button type="submit" class="btn btn-success m-t-8 m-b-8">
+					Register Now </button>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					<div class="clearfix"></div>
+					 </form>
+					</div>
+					</div>
+					</div>
+					</div> 
+			{% endif %}
+			</div>
+			<div class="col-md-12 box-list-two m-t-20">
+			<div class="col-md-12 no-padding">
+			<h3 class="insidetop-head-2 no-margin p-b-12">Presented by</h3>
+			<div class="row">
+			<div class="col-md-2">
+			<div class="team-singleinside" style="margin-bottom: 0px;"> <img src="7%20practical%20steps%20to%20manage%20a%20successful%20%E2%80%9CSuccession%20Planning%E2%80%9D%20-%20Meirc%20Webinar_files/hani-rahman.jpg" alt="" class="img-responsive">
+			<div class="clearfix"></div>
+			</div>
+			</div>
+			<div class="col-md-10">
+			<h3 class="insidetop-head-2 no-margin no-padding">{{ webinar.aurthor }}</h3>
+			<p class="semi-bold">
+			{{ webinar.aurthor.role }} </p>
+			<div class="clearfix"></div>
+			<p class="text-justify text-arabic-right">
+			{{webinar.aurthor.description}}</p>
+			<div class="clearfix"></div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="clearfix m-b-20"></div>
+			<div class="clearfix m-b-20"></div>
+			</div>
+			</div>
+			</div>
+		</section>
+</main>
+
+<main> </main>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}Rex Home {% endblock %}
+
+{% block main %} 
+<main>
+                    
+  <div id="wrap">
+      <div class="oe_structure" data-oe-model="ir.ui.view" data-oe-id="2155" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/div[1]">
+          <section class="pt8 pb8">
+              <div class="container">
+                  <div class="row s_nb_column_fixed">
+                      <div class="col-lg-12 s_title pt16 pb0">
+                          <h1>Contact us</h1>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </div>
+      <div class="container mt-2 mb32">
+          <div class="row">
+              <div class="col-lg-8">
+                  <div class="oe_structure" data-oe-model="ir.ui.view" data-oe-id="2155" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/div[2]/div[1]/div[1]/div[1]">
+                      <section class="s_text_block t_contactus_text_block">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <p>
+                                          Contact us about anything related to our company or services.<br/>
+                                          We'll do our best to get back to you as soon as possible.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+                  <div>
+<form action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
+  <div class="form-group row form-field o_website_form_required_custom">
+      <label class="col-lg-3 col-md-4 col-form-label" for="contact_name" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[1]/label[1]">Your Name</label>
+      <div class="col-lg-7 col-md-8">
+          <input type="text" class="form-control o_website_form_input" name="contact_name" required="" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[1]/div[1]/input[1]" value=""/>
+      </div>
+  </div>
+  <div class="form-group row form-field">
+      <label class="col-lg-3 col-md-4 col-form-label" for="phone" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[2]/label[1]">Phone Number</label>
+      <div class="col-lg-7 col-md-8">
+          <input type="text" class="form-control o_website_form_input" name="phone" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[2]/div[1]/input[1]" value=""/>
+      </div>
+  </div>
+  <div class="form-group row form-field o_website_form_required_custom">
+      <label class="col-lg-3 col-md-4 col-form-label" for="email_from" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[3]/label[1]">Email</label>
+      <div class="col-lg-7 col-md-8">
+          <input type="text" class="form-control o_website_form_input" name="email_from" required="" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[3]/div[1]/input[1]" value=""/>
+      </div>
+  </div>
+  <div class="form-group row form-field o_website_form_required_custom">
+      <label class="col-lg-3 col-md-4 col-form-label" for="partner_name" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[4]/label[1]">Your Company</label>
+      <div class="col-lg-7 col-md-8">
+          <input type="text" class="form-control o_website_form_input" name="partner_name" required="" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[4]/div[1]/input[1]" value=""/>
+      </div>
+  </div>
+  <div class="form-group row form-field o_website_form_required">
+      <label class="col-lg-3 col-md-4 col-form-label" for="name" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[5]/label[1]">Subject</label>
+      <div class="col-lg-7 col-md-8">
+          <input type="text" class="form-control o_website_form_input" name="name" required="" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[5]/div[1]/input[1]" value=""/>
+      </div>
+  </div>
+  <div class="form-group row form-field o_website_form_required_custom">
+      <label class="col-lg-3 col-md-4 col-form-label" for="description" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[6]/label[1]">Your Question</label>
+      <div class="col-lg-7 col-md-8">
+          <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+      </div>
+  </div>
+  <div class="form-group row" data-oe-model="ir.ui.view" data-oe-id="2156" data-oe-field="arch" data-oe-xpath="/data/xpath/div/form[1]/div[7]">
+      <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+          <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Send</a>
+          <span id="o_website_form_result"></span>
+      </div>
+  </div>
+</form>
+</div>
+</div>
+              <div class="col-lg-4 t_company_details">
+                  
+<address itemscope="itemscope" itemtype="http://schema.org/Organization">
+<div data-oe-model="res.company" data-oe-id="1" data-oe-field="partner_id" data-oe-type="contact" data-oe-expression="res_company.partner_id" data-oe-many2one-id="1" data-oe-many2one-model="res.partner" data-oe-contact-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;name&quot;, &quot;address&quot;, &quot;phone&quot;, &quot;mobile&quot;, &quot;email&quot;], &quot;tagName&quot;: &quot;div&quot;, &quot;expression&quot;: &quot;res_company.partner_id&quot;, &quot;type&quot;: &quot;contact&quot;, &quot;inherit_branding&quot;: true, &quot;translate&quot;: false}">
+<address class="mb0" itemscope="itemscope" itemtype="http://schema.org/Organization">
+
+
+
+<div>
+
+<span itemprop="name">Purevisions</span>
+
+
+
+</div>
+
+
+<div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+<div>
+<i class="fa fa-map-marker fa-fw" role="img" aria-label="Address" title="Address"></i>
+<span itemprop="streetAddress">Pure visions health &amp; saftey training and consultancy center.<br/>3269 King Abdullah Branch Rd<br/>Riyadh  12254<br/>Saudi Arabia</span>
+</div>
+
+
+
+
+
+<div><i class="fa fa-envelope fa-fw" role="img" aria-label="Email" title="Email"></i> <span itemprop="email">info@pure-visions.com</span></div>
+</div>
+
+</address>
+</div>
+
+<span class="fa fa-map-marker fa-fw mt16" role="img" aria-label="Address" title="Address" data-oe-model="ir.ui.view" data-oe-id="521" data-oe-field="arch" data-oe-xpath="/t[1]/address[1]/t[1]/span[1]"></span> <a target="_BLANK" data-oe-model="ir.ui.view" data-oe-id="521" data-oe-field="arch" data-oe-xpath="/t[1]/address[1]/t[1]/a[1]" href="https://maps.google.com/maps?q=Pure+visions+health+%26+saftey+training+and+consultancy+center.%2C+Riyadh+12254%2C+Saudi+Arabia&amp;z=8"> Google Maps</a>
+
+</address>
+
+
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.797970040673!2d46.677680415000474!3d24.73381528411381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f24ea6bf8172b7!2sPure%20visions%20health%26%20saftey%20training%20and%20consultancy%20center!5e0!3m2!1sen!2ssa!4v1567445876615!5m2!1sen!2ssa" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" data-oe-model="ir.ui.view" data-oe-id="2155" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/div[2]/div[1]/div[2]/iframe[1]"></iframe>
+
+              </div>
+              
+          </div>
+      </div>
+      <div class="oe_structure mt-2" data-oe-model="ir.ui.view" data-oe-id="2155" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/div[3]"></div>
+  </div>
+
+
+<div class="mask_cover" data-oe-id="1843" data-oe-xpath="/data/xpath/div" data-oe-model="ir.ui.view" data-oe-field="arch"></div>
+</main>
+{% endblock %}
