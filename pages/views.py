@@ -2,6 +2,8 @@ from django.shortcuts import render
 from courses.models import Course
 #main pages
 
+#my changes
+
 def home(request):
     #courses = Course.objects.filter(date__year='2020')
     courses = Course.objects.all()
