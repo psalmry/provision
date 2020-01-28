@@ -1,1 +1,7 @@
 db.sqlite3
+pages/__pycache__/
+aurthor/__pycache__/
+courses/__pycache__/
+provision_users/__pycache__/
+webinars/__pycache__/
+provision/__pycache__/
