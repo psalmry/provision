@@ -11,6 +11,8 @@ from django.contrib.auth.models import User
 class UserLoginForm(forms.Form):
 	username = forms.CharField()
 	password = forms.CharField(widget=forms.PasswordInput)
+	
+
 
 	def clean(self, *args, **kwargs):
 		username = self.cleaned_data.get('username')
@@ -31,14 +33,16 @@ class UserRegistrationForm(UserCreationForm):
 	username = forms.CharField(max_length=30)
 	email = forms.EmailField(label='Email Address')
 	email2 = forms.EmailField(label='Confirm Email Address')
+	first_name = forms.CharField(max_length=100, help_text='Last Name')
+	last_name = forms.CharField(max_length=100, help_text='Last Name')
 	
 
 	class Meta:
 		model = User
-		fields = [	'username',
-					'email', 
+		fields = [	'username', 'first_name', 'last_name',
+					'email',
 					'email2',
-					'password1', 'password2'
+					'password1', 'password2' 
 					]
 
 	def clean(self):
@@ -52,6 +56,6 @@ class UserRegistrationForm(UserCreationForm):
 			raise forms.ValidationError("This email is already being used")	
 			#return email
 
-		return super(UserRegistrationForm, self).clean(*args, **kwargs)
+		#return super(UserRegistrationForm, self).clean(*args, **kwargs)
 
 
