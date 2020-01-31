@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import path
 from pages.views import *
 from provison_users.views import login_view, signup_view, logout_view
-from courses.views import course_list_view, course_detail_view, test_course_detail_view
+from courses.views import course_list_view, course_detail_view, test_course_detail_view, mycourse_view
 from webinars.views import webinar, webinar_list_view, webinar_detail_view
 from django.conf import settings 
 from django.conf.urls.static import static 
@@ -34,6 +34,8 @@ urlpatterns = [
     path('<int:id>/category', course_list_view),
     path('<int:id>/course', course_detail_view, name='course_detail'),
     path('test', test_course_detail_view, name='test_course_detail'),
+    path('your-courses/', mycourse_view, name='mycourse_view'),
+    
 
     #Services Pages
     path('blended-learning', service_blended_learning ),

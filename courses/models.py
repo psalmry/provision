@@ -1,5 +1,6 @@
 from django.db import models
 from aurthor.models import Authur
+from django.contrib.auth.models import User
 
 COURSE_TYPE = [
     ('tech', 'Technical'),
@@ -45,8 +46,8 @@ class Categorie(models.Model):
 		return "/%i/category" % self.id
 
 class Course_Locality(models.Model):
-	course_id = models.ForeignKey('Course', on_delete=models.CASCADE, null=True)
-	date = models.DateField()
+	#course_id = models.ForeignKey('Course', on_delete=models.CASCADE, null=True)
+	#date = models.DateField()
 	location = models.ForeignKey('Location', on_delete=models.CASCADE, null=True)
 	language = models.ForeignKey('Language', on_delete=models.CASCADE, null=True)
 
@@ -54,7 +55,7 @@ class Course_Locality(models.Model):
 		verbose_name_plural = 'Course Localities'
 
 	def __str__(self):
-		return self.course_id.title + ' | ' + str(self.date)
+		return self.location.state + ' | ' + self.language.name
 
 
 class Location(models.Model):
@@ -78,8 +79,27 @@ class Language(models.Model):
 	def __str__(self):
 		return self.name + ' | ' + self.symbol
 
-class UserPon(models.Model):
-	name = models.CharField(max_length=150)
+
+class MyCourse(models.Model):
+	COURSE_STATUS = [('pending', 'Pending'),
+				('register', 'Registered'), 
+				('finished', 'Finished')]
+
+	user_id = models.OneToOneField(User, on_delete=models.CASCADE)
+	course_id = models.ForeignKey('Course', on_delete=models.CASCADE, null=True)
+	localty  = models.ForeignKey('Course_Locality', on_delete=models.CASCADE, null=True)
+	date = models.DateField()
+	status = models.CharField(max_length=8, choices=COURSE_STATUS, default='pending')
+
+	def __str__(self):
+		return self.course_id.title
+
+	class Meta:
+		verbose_name_plural = 'My Courses'
+
+
+    			
+
 
 
 

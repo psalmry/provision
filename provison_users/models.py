@@ -33,6 +33,7 @@ class Profile(models.Model):
         return self.user.username
 
 
+
 @receiver(post_save, sender=User)
 def update_profile_signal(sender, instance, created, **kwargs):
     if created:

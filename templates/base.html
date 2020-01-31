@@ -97,7 +97,7 @@
                             <ul>
                               <li>
                                 {% if user.is_authenticated %}
-                                <a href="/1/category" data-original-title="" title="" aria-describedby="tooltip664027">Welcome, {{ user.get_username }}.</a>
+                                <a href="{% url 'profile_view' %}" data-original-title="" title="" aria-describedby="tooltip664027">Welcome, {{ user.get_username }}.</a>
                                 {% endif %}
                               </li>
                               <li>
@@ -131,7 +131,7 @@
                                   </a>
                                   <div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
                                     <a href="{% url 'profile_view' %}" role="menuitem" class="dropdown-item"><span class="fa fa-user"></span>My Account</a>
-                                    <a href="/my/orders" role="menuitem" class="dropdown-item"><span class="fa fa-pie-chart"></span>My Courses</a>
+                                    <a href="{% url 'mycourse_view' %}" role="menuitem" class="dropdown-item"><span class="fa fa-pie-chart"></span>My Courses</a>
                                     <a id="o_logout" class="dropdown-item" role="menuitem" href="accounts/logout/"><span class="fa fa-sign-out"></span>Logout</a>
                                   </div>
                                 </div>

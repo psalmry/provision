@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Course, Categorie, Course_Locality
+from .models import Course, Categorie, Course_Locality, MyCourse
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def course_list_view(request, id):
@@ -28,6 +29,14 @@ def course_detail_view(request, id):
 	}
 	return render(request, "courses/course_detail.htm", context)
 
+
+@login_required
+def mycourse_view(request):
+	courses = MyCourse.objects.filter(user_id=request.user.id)
+
+	context = {"courses": courses}
+	return render(request, 'courses/mycourses.htm', context)
+
 def test_course_detail_view(request):
 	#Call all thee Categories
 	obj = get_object_or_404(Course, id=23)
@@ -37,5 +46,7 @@ def test_course_detail_view(request):
 	}
 
 	return render(request, "courses/test_course_detail.htm", context)
+
+
 
 
