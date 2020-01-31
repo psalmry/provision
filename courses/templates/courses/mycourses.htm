@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block tittle %}Rex Home {% endblock %}
+
+{% block main %} 
+
+{% if courses %}
+	{% for course in courses %}
+		<h3>{{course.course_id.title}}</h3>
+		<p>{{course.localty}}</p>
+		<p>{{course.date}}</p>
+		<p>{{course.status}}</p>
+	{% endfor %}
+{% else %}
+	<h3>you have not registered for any course</h3>
+{% endif %}
+
+
+{% endblock main %}
