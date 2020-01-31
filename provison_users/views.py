@@ -56,7 +56,7 @@ def login_view(request):
 		return redirect('/')  
 	context = {'form': form }
 
-	return render(request, "accounts/login.htm", context)
+	return render(request, "provison_users/login.htm", context)
 
 
 def signup_view(request):
@@ -96,7 +96,7 @@ def signup_view(request):
 		'''
 	context = {'form': form}	
 
-	return render(request, 'accounts/signup.htm', context)
+	return render(request, 'provison_users/signup.htm', context)
 
 def logout_view(request):
 	logout(request)
