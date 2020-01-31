@@ -23,7 +23,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     location = models.CharField(max_length=30, blank=True)
     birthdate = models.DateField(null=True, blank=True)
-    bio = models.TextField(null=True)
+    bio = models.TextField(null=True, max_length=850)
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
     user_type = models.CharField(choices=TYPE, default='Individual', max_length=10, blank=True)
     signup_confirmation = models.BooleanField(default=False)
