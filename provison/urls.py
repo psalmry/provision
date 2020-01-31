@@ -7,7 +7,7 @@ from courses.views import course_list_view, course_detail_view, test_course_deta
 from webinars.views import webinar, webinar_list_view, webinar_detail_view
 from django.conf import settings 
 from django.conf.urls.static import static 
-from provison_users.views import activation_sent_view, activate
+from provison_users.views import activation_sent_view, activate, profile_view
 
 
 urlpatterns = [
@@ -22,10 +22,14 @@ urlpatterns = [
     path('sent/', activation_sent_view, name="activation_sent"),
     path('activate/<slug:uidb64>/<slug:token>/', activate, name='activate'),
 
+
+    #User Profile
+    path('profile/', profile_view, name="profile_view"),
+
     #Webinars
-    path('webinar', webinar ),#fromPages
-    path('webinars',webinar_list_view),
-    path('<int:id>/webinar',webinar_detail_view),
+    path('webinar/', webinar ),#fromPages
+    path('webinars/',webinar_list_view),
+    path('<int:id>/webinar/',webinar_detail_view),
 
     path('<int:id>/category', course_list_view),
     path('<int:id>/course', course_detail_view, name='course_detail'),

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'provison_users',
     'aurthor',
     'webinars',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,6 @@ MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
