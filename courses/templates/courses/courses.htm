@@ -245,7 +245,7 @@
 		<table>
 		<tr>
 		<td width='24'><i class='fa fa-calendar' aria-hidden='true'></i></td>
-		<td><a href="{{ course.get_absolute_url }}">5 days Course </a></td>
+		<td><a href="{{ course.get_absolute_url }}"> {{course.duration}} days Course </a></td>
 		</tr>
 		</table>
 		</div>
@@ -253,7 +253,7 @@
 		<table>
 		<tr>
 		<td width='24'><i class='fa fa-flag-checkered' aria-hidden='true'></i></td>
-		<td><a href="{{ course.get_absolute_url }}">English</a></td>
+		<td><a href="{{ course.get_absolute_url }}">{{ course.base_language}}</a></td>
 		</tr>
 		</table>
 		</div>

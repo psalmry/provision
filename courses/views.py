@@ -1,15 +1,15 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Course, Categorie, Course_Locality, MyCourse
+from .models import Course, Category, CourseInfo, MyCourse
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def course_list_view(request, id):
 	#A VERY DYNAMIC VIEW
 	#all the categories printed
-	categories = Categorie.objects.all()
+	categories = Category.objects.all()
 
 	#the One category to print
-	category = Categorie.objects.get(pk=id)
+	category = Category.objects.get(pk=id)
 
 	#Filter all the course for the category
 	courses = Course.objects.filter(category=category)
@@ -21,7 +21,7 @@ def course_list_view(request, id):
 
 def course_detail_view(request, id):
 	#Call all thee Categories
-	categories = Categorie.objects.all()
+	categories = Category.objects.all()
 	obj = get_object_or_404(Course, id=id)
 	context = {
         "object": obj,
@@ -37,12 +37,13 @@ def mycourse_view(request):
 	context = {"courses": courses}
 	return render(request, 'courses/mycourses.htm', context)
 
-def test_course_detail_view(request):
+def test_course_detail_view(request, id):
 	#Call all thee Categories
-	obj = get_object_or_404(Course, id=23)
-	
+	categories = Category.objects.all()
+	obj = get_object_or_404(Course, id=id)
 	context = {
-        "object": obj,
+        "course": obj,
+        'categories': categories
 	}
 
 	return render(request, "courses/test_course_detail.htm", context)
