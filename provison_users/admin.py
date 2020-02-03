@@ -21,7 +21,7 @@ class CustomUserAdmin(UserAdmin):
 
     def get_user_type(self, instance):
         return instance.profile.user_type
-    get_user_type.short_description = 'Coompany or Paid'
+    get_user_type.short_description = 'Company or Paid'
 
     def get_inline_instances(self, request, obj=None):
         if not obj:

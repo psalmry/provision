@@ -4,12 +4,13 @@ from django.contrib import admin
 from .models import *
 
 class CourseAdmin(admin.ModelAdmin):
-	list_display = ('title', 'category', 'fees', 'duration', 'course_type')
+	list_display = ('code','title', 'category', 'duration', 'course_type', 'label')
+
 
 class MyCourseAdmin(admin.ModelAdmin):
-	list_display = ('user_id', 'course_id', 'localty', 'date', 'status')
+	list_display = ('user_id', 'course_id', 'start_date', 'end_date',  'status')
 
-class CategorieAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
 	list_display = ('name', 'date')
 
 
@@ -19,15 +20,16 @@ class LocationAdmin(admin.ModelAdmin):
 class LanguageAdmin(admin.ModelAdmin):
 	list_display = ('name', 'symbol')
 
-class Course_LocalityAdmin(admin.ModelAdmin):
-	list_display = ('location','language')
-
+class CourseInfoAdmin(admin.ModelAdmin):
+	list_display = ('course_id', 'location', 'language', 'fees', 'start_date', 'end_date', 'instructor')
+	list_select_related = ('course_id', )
+	
 
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(MyCourse, MyCourseAdmin)
-admin.site.register(Categorie, CategorieAdmin)
-admin.site.register(Course_Locality, Course_LocalityAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(CourseInfo, CourseInfoAdmin)
 admin.site.register(Location, LocationAdmin)
 admin.site.register(Language, LanguageAdmin)
 

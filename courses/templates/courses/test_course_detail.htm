@@ -4,26 +4,44 @@
 
 {% block main %} 
 <main>
+
+<!-- 
+
+
+-->
+
 <h1> Course Page <h1>
-<h3>{{ object.title }}</h1>
-<p>{{ object.category }}</p>
-<p>{{ object.overview }}</p>
+<h3>Title: {{ course.title }}</h3>
+<h3>{{ course.code }}</h3>
+
+<h4>Label: </h4>    		<p> {{ course.label }}</p>
+<h4>Category: </h4> 		<p>{{ course.category }}</p>
+<h4>Overview: </h4> 		<p>{{ course.overview }}</p>
+<h4>Course Type: </h4>  	<p>{{ course.course_type }}</p>
+<h4>Date: </h4>         	<p>{{ course.date }}</p>
+<h4>Outline: </h4>      	<p>{{ course.outline }}</p>
+<h4>Duration (Days):</h4>	<p> {{ course.duration }}</p>
 
 
 
+	{%  if course.variants.all %}
+		{% for item in course.variants.all %}
+		<ul>
+			
+			<H4> Course Varient </H4>
+				<li>Location: {{ item.location }}</li>
+				<li>Language: {{ item.language }}</li>
+				<li>Fees: {{ item.fees }}</li>
+				<li>Start Date: {{ item.start_date }}</li>
+				<li>End Date: {{ item.end_date }}</li>
+				<li>Instructor: {{ item.instructor }}</li> <!-- If ANY -->
 
-{% for location in object.location.all %}
-<ul>
-		<li>{{ location.date }}</li>
-		<li>{{ location.language }}</li>
-		<li>{{ location.location }}</li>
-</ul>
-{% endfor %}
+				<h3> Register Button </h3>
+		</ul>
+		{% endfor %}
 
-
-
-<p>{{ object.fees }}</p>
-
-<p>{{ object.outline }}</p>
+	{% else %}
+		<H3>Course does not have extra infomations or variants</H3>
+	{% endif %}
 
 {% endblock %}
